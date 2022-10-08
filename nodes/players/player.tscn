@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsnbgnswsgn3e"]
+
+[ext_resource type="Script" path="res://nodes/players/player.gd" id="1_fy00i"]
+[ext_resource type="Texture2D" uid="uid://455dh5aesfsc" path="res://images/cars.png" id="2_olru1"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_fy00i")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+
+[node name="Arrow" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6)
+texture = ExtResource("2_olru1")
+region_enabled = true
+region_rect = Rect2(16, 32, 16, 16)

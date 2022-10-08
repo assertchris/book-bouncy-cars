@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2ai1waupfuhq"]
+
+[ext_resource type="PackedScene" uid="uid://bsnbgnswsgn3e" path="res://nodes/players/player.tscn" id="1_ogtcs"]
+[ext_resource type="Script" path="res://nodes/players/monster_truck_player.gd" id="2_6b6l6"]
+[ext_resource type="Texture2D" uid="uid://455dh5aesfsc" path="res://images/cars.png" id="3_kkit5"]
+
+[node name="MonsterTruckPlayer" instance=ExtResource("1_ogtcs")]
+script = ExtResource("2_6b6l6")
+
+[node name="Sprite" parent="." index="0"]
+texture_filter = 1
+texture = ExtResource("3_kkit5")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 16)
+
+[node name="Collider" parent="." index="1"]
+polygon = PackedVector2Array(-5, -6, 5, -6, 5, 5, -5, 5)

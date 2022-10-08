@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://yk3b8ji0dli5"]
+
+[ext_resource type="Script" path="res://nodes/globals/constants.gd" id="1_5c131"]
+[ext_resource type="PackedScene" uid="uid://ddrf3yyu3i4na" path="res://nodes/screens/menu_screen.tscn" id="2_0vsaf"]
+[ext_resource type="PackedScene" uid="uid://dx7punx47wwbn" path="res://nodes/screens/new_game_screen.tscn" id="2_ftfqx"]
+[ext_resource type="PackedScene" uid="uid://ccsit0gloquxn" path="res://nodes/screens/play_screen.tscn" id="3_tkei0"]
+
+[node name="Constants" type="Node"]
+script = ExtResource("1_5c131")
+menu_scene = ExtResource("2_0vsaf")
+new_game_scene = ExtResource("2_ftfqx")
+play_scene = ExtResource("3_tkei0")

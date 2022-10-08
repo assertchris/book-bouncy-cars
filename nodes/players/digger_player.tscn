@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv56q0u03v1j6"]
+
+[ext_resource type="PackedScene" uid="uid://bsnbgnswsgn3e" path="res://nodes/players/player.tscn" id="1_omr8y"]
+[ext_resource type="Script" path="res://nodes/players/digger_player.gd" id="2_fpdn6"]
+[ext_resource type="Texture2D" uid="uid://455dh5aesfsc" path="res://images/cars.png" id="3_nwm64"]
+
+[node name="DiggerPlayer" instance=ExtResource("1_omr8y")]
+script = ExtResource("2_fpdn6")
+
+[node name="Sprite" parent="." index="0"]
+texture_filter = 1
+texture = ExtResource("3_nwm64")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+
+[node name="Collider" parent="." index="1"]
+polygon = PackedVector2Array(-6, -5, 2, -5, 7, -4, 7, 3, 2, 4, -6, 4)

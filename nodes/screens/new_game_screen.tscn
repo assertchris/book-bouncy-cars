@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx7punx47wwbn"]
+
+[ext_resource type="PackedScene" uid="uid://dleqmfn7pguxx" path="res://nodes/screens/screen.tscn" id="1_0i13o"]
+[ext_resource type="Script" path="res://nodes/screens/new_game_screen.gd" id="2_4x312"]
+
+[node name="NewGameScreen" instance=ExtResource("1_0i13o")]
+script = ExtResource("2_4x312")
+
+[node name="Center" type="CenterContainer" parent="." index="0"]
+offset_right = 320.0
+offset_bottom = 240.0
+
+[node name="Buttons" type="VBoxContainer" parent="Center" index="0"]
+offset_left = 37.0
+offset_top = 87.0
+offset_right = 282.0
+offset_bottom = 153.0
+
+[node name="Back" type="Button" parent="Center/Buttons" index="0"]
+offset_right = 245.0
+offset_bottom = 31.0
+text = "back"
+
+[node name="Seed" type="HBoxContainer" parent="Center/Buttons" index="1"]
+offset_top = 35.0
+offset_right = 245.0
+offset_bottom = 66.0
+
+[node name="Phrase" type="LineEdit" parent="Center/Buttons/Seed" index="0"]
+custom_minimum_size = Vector2i(200, 0)
+offset_right = 200.0
+offset_bottom = 31.0
+
+[node name="Play" type="Button" parent="Center/Buttons/Seed" index="1"]
+offset_left = 204.0
+offset_right = 245.0
+offset_bottom = 31.0
+text = "play"
+
+[connection signal="pressed" from="Center/Buttons/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Center/Buttons/Seed/Play" to="." method="_on_play_pressed"]
